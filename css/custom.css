@@ -1,0 +1,1297 @@
+/* ----------------------------------
+
+Name: custom.css
+Version: 1.0
+
+------------------------------------- 
+
+Table of contents Home page
+    
+   	   1.1  General css
+       1.2  Header_section css 
+       1.3  Main_Menu_section
+       1.4  Preloader css
+	   1.5  Rev_slider css
+       1.6  Bas-Bitcoin-section css
+       1.7  Choose-Bitcoin-section css
+       1.8  About-Bitcoin-section css
+       1.9  Bitcoin-ask-question-section css
+       1.10 How-It-Work-Section css
+       1.11 Request--Back-Section css
+       1.12 Price-section css
+       1.13 Promotion-Section css
+       1.14 Team-Section css
+       1.15 Countup-Section css
+       1.16 News-Section  css
+       1.17 Scrolltop  css  css
+       1.18 Footer-Section  css
+       
+
+
+Table of contents Blog Single page
+
+    1. Banner Section
+    2. blog Left Content Section
+    3. Blog Right content Section
+
+*/
+
+
+
+
+/*--------------------------------------------------------------------
+				1.1General css
+----------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Roboto:400,500,700&display=swap');
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a:focus,
+a:hover,
+a:active,
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+}
+
+input,
+select,
+textarea,
+button {
+    outline: 0;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+    -webkit-transition: opacity 0.3s 0.3s ease;
+    -moz-transition: opacity 0.3s 0.3s ease;
+    -ms-transition: opacity 0.3s 0.3s ease;
+    -o-transition: opacity 0.3s 0.3s ease;
+    transition: opacity 0.3s 0.3s ease;
+    opacity: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+.section-ptb {
+    padding: 100px 0px 100px;
+}
+
+/*--------------------------------------------------------------------
+				1.2 Header_section css
+----------------------------------------------------------------------*/
+.header_section {
+    position: relative;
+    background: #222;
+}
+
+.nav.crpyto_hd_info li {
+    color: #fff;
+    font-size: 14px;
+    margin-right: 11px;
+    padding: 14px;
+}
+
+.nav.crpyto_hd_info li:first-child {
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.crpyto_hd_info li i {
+    margin: 3px 10px 0 0;
+}
+
+.f_phone {
+    font-size: 12px;
+    transform: rotate(106deg);
+    margin-right: 10px;
+}
+
+.crpyto_user_hd_info {
+    justify-content: flex-end;
+}
+
+.crpyto_user_hd_info li {
+    font-size: 14px;
+    margin-left: 30px;
+    padding: 14px 0 14px 0;
+    z-index: 99;
+}
+
+.crpyto_user_hd_info li a {
+    color: #fff;
+}
+
+.crpyto_user_hd_info li i {
+    margin: 3px 16px 0 0;
+}
+
+.drop_menu {
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.drop_menu li {
+    margin: 0;
+    padding: 6px 10px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.drop_menu li:last-child {
+    border-bottom: 0px solid #dddddd;
+}
+
+.drop_menu li a {
+    color: #000;
+}
+
+.dropdown:hover .drop_menu {
+    height: 102px;
+    opacity: 1;
+
+}
+
+.fa_down {
+    margin-right: 0;
+}
+
+.crpyto_user_hd_info li:hover a i {
+    color: #ffb426;
+}
+
+/*--------------------------------------------------------------------
+				1.3 Main_Menu_section
+----------------------------------------------------------------------*/
+.main_menu_section {
+    position: relative;
+}
+
+.main_menu_items {
+    align-items: center;
+}
+
+.main_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.main_menu ul li a {
+    padding: 8px 13px 28px !important;
+    text-transform: uppercase;
+    color: #222;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    margin-top: 30px;
+}
+
+.main_menu ul li a:hover {
+    color: #ffb426 !important;
+}
+
+.main_menu ul li a.active {
+    color: #ffb426 !important;
+    border-bottom: 3px solid #ffb426 !important;
+
+}
+
+.d_down_menu,
+.s_down_menu,
+.sh_down_menu,
+.bd_down_menu {
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    background: #333;
+    width: 230px;
+    padding: 12px 0px;
+    z-index: 999;
+    display: none;
+}
+
+.main_menu ul .d_down_menu li a,
+.main_menu ul .s_down_menu li a,
+.main_menu ul .sh_down_menu li a,
+.main_menu ul .bd_down_menu li a {
+    color: #ffffff !important;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 12px 20px !important;
+    margin: 0;
+    text-transform: capitalize;
+    transition: all .5s ease 0s;
+    border-bottom: none;
+}
+
+.main_menu ul .d_down_menu li:hover a,
+.main_menu ul .s_down_menu li:hover a,
+.main_menu ul .sh_down_menu li:hover a,
+.main_menu ul .bd_down_menu li:hover a {
+    color: #ffb426 !important;
+
+}
+
+.bc_btn {
+    position: relative;
+    background: #ffb426;
+    font-size: 14px;
+    line-height: 42px;
+    font-weight: 700;
+    color: #ffffff;
+    border: 2px solid #ffb426;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0 26px;
+    font-family: 'Roboto', sans-serif;
+    -webkit-transition: all .5s cubic-bezier(0.4, 0, 1, 1);
+    transition: all .5s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.bc_btn:hover {
+    background: transparent;
+    color: #ffb426;
+}
+
+.menu_right_area {
+    text-align: center;
+}
+
+.mobile_menu {
+    display: none;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    -webkit-animation: 600ms ease-in-out 0s normal none 1 running fadeInDown;
+    background: rgba(255, 255, 255, 1) none repeat scroll 0 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+/*--------------------------------------------------------------------
+			1.4	Preloader css
+----------------------------------------------------------------------*/
+.preloader {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/*--------------------------------------------------------------------
+				1.5 Rev_slider css
+----------------------------------------------------------------------*/
+
+.slide-content h1 {
+    color: #fff;
+    font-size: 45px;
+    line-height: 62px;
+    margin: 14px 0 9px;
+    font-weight: 500;
+    padding: 0px 25px;
+    border-left: 7px solid #ffb426;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+
+.slide-content h2 {
+    font-size: 45px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.slide-content p {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin: 0 0 30px;
+}
+
+.slider-content-btn a {
+    padding: 0px 22px;
+    margin-right: 15px;
+    -webkit-transition: all .5s ease !important;
+    transition: all .5s ease !important;
+
+}
+
+.rev_slider_wrapper .tparrows {
+    border: 2px solid #fff;
+    background: transparent;
+}
+
+.tp-bannertimer {
+    height: 7px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+/*--------------------------------------------------------------------
+				1.6 Bas-Bitcoin-section  css
+----------------------------------------------------------------------*/
+
+.bitcoin-taitle h1 {
+    position: relative;
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+.bitcoin-taitle h1:before {
+    position: absolute;
+    content: '';
+    background: #ffb426;
+    width: 50px;
+    height: 2px;
+    left: 0px;
+    bottom: -15px;
+}
+
+.bitcoin-taitle p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #848484;
+    margin-top: 20px;
+}
+
+.bas-bitcoin-content h3 {
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 17px;
+    font-weight: 400;
+    color: #222222;
+    line-height: 27px !important;
+    text-transform: none;
+}
+
+.bas-bitcoin-content p {
+    max-width: 720px;
+    color: #666666;
+    margin-top: 24px;
+    padding-bottom: 28px;
+    border-bottom: 0px solid #ededed;
+}
+
+/*--------------------------------------------------------------------
+             1.7  Choose-Bitcoin-section css
+----------------------------------------------------------------------*/
+.choose-bitcoin-section {
+    overflow: hidden;
+    position: relative;
+    background: #f8f8f8;
+    text-align: center;
+    z-index: 1;
+}
+
+.choose-bitcoin-section:before {
+    content: '';
+    position: absolute;
+    width: 76%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    height: 100%;
+    left: 10%;
+    top: 50%;
+    background: #ffb426;
+    z-index: -2;
+}
+
+.ch-bit-taitle h1:before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ch-bit-service {
+    margin-top: 66px;
+}
+
+.ch-bit-service-content {
+    background: #fff;
+    padding: 38px 20px 38px;
+    margin-bottom: 25px;
+    border: 2px solid #eee;
+    transition: all .5s ease;
+}
+
+.ch-bit-service-content:hover {
+    border-color: #ffb426;
+}
+
+.ch-bit-service-content img {
+    max-width: 64px;
+}
+
+.ch-bit-service-text h3 {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.ch-bit-service-text h3 a {
+    color: #222222;
+    transition: .5s;
+    font-family: 'Roboto', sans-serif;
+}
+
+.ch-bit-service-text h3 a:hover {
+    color: #ffb426;
+}
+
+.ch-bit-service-text p {
+    color: #777777;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+/*--------------------------------------------------------------------
+             1.8  About-Bitcoin-section css
+----------------------------------------------------------------------*/
+.ab-bitcoin-c-list {
+    margin: 30px 0 30px;
+}
+
+.ab-bitcoin-c-list li {
+    margin-bottom: 10px;
+    color: #777;
+    font-size: 15px;
+}
+
+.ab-b-btn {
+    margin-right: 10px;
+}
+
+.ab-bitcoin-c-list li i {
+    font-size: 16px;
+    color: #ffb426;
+    margin-right: 10px;
+}
+/*--------------------------------------------------------------------
+             1.9  Bitcoin-ask-question-section css
+----------------------------------------------------------------------*/
+.bit-ask-q-section {
+    background: url('../../assets/images/bit-ask-q-bg.jpg') bottom center no-repeat;
+    background-size:cover;
+}
+
+.bit-askq-content {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: #ffb426;
+    color: #fff;
+    padding: 35px 0 35px 30px;
+    font-family: 'Roboto', sans-serif;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.bit-askq-cmr {
+    margin-top: 30px;
+}
+
+.bit-askq-content:hover {
+    background: #555;
+}
+
+.bit-askq-left {
+    float: left;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #76ccde;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 70px;
+    margin-right: 15px;
+    font-size: 32px;
+
+}
+
+.bit-askq-left i {
+    color: #fff;
+}
+
+.bit-asq-text {}
+
+.bit-asq-text h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.bit-asq-text p {
+    padding-right: 12%;
+}
+
+.bit-askq-right {
+    top: 0;
+    position: absolute;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.bit-askq-right i {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    color: #46527c;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    font-size: 16px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*--------------------------------------------------------------------
+             1.10  How-It-Work-Section css
+----------------------------------------------------------------------*/
+.how-it-work-section {
+    text-align: center;
+}
+
+.hi-work-content {
+    margin-top: 60px;
+}
+
+.hi-work-box {
+    position: relative;
+    padding: 40px 20px;
+    transition: all .3s;
+
+}
+
+.hi-work-box.effect {
+    box-shadow: 0 0 35px rgba(0, 0, 0, .1);
+}
+
+.hi-work-box.effect:before,
+.hi-work-box.effect:after {
+    position: absolute;
+    content: "";
+    top: 0px;
+    right: -100px;
+    background: url(../../assets/images/icon/arrow-big.png) center center no-repeat;
+    width: 200px;
+    height: 120px;
+
+}
+
+.hi-work-box.effect:after {
+    left: -100px;
+}
+
+.hi-work-box:hover {
+    box-shadow: 0 0 35px rgba(0, 0, 0, .1);
+}
+
+.hi-work-icon {
+    position: relative;
+    font-size: 32px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    margin: 0 auto 30px;
+     -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+}
+
+.hi-work-box h4 {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #222;
+    font-weight: 500;
+}
+
+.hi-work-box h4 a {
+    color: #222222;
+    font-family: 'Roboto', sans-serif;
+    transition: .5s;
+}
+
+.hi-work-box p {
+    padding: 0px 10px;
+    color: #777;
+
+}
+
+/*--------------------------------------------------------------------
+             1.11  Request--Back-Section css
+----------------------------------------------------------------------*/
+.req-back-section {
+    position: relative;
+    background: url('../../assets/images/req-back-bg1.jpg') fixed no-repeat center center / cover;
+    padding: 0px 0px;
+    overflow: visible;
+}
+
+.req-back-section:before {
+    position: absolute;
+    content: '';
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(28, 28, 28, 0.70);
+}
+
+.req-back-content {
+    position: relative;
+    padding-top: 90px;
+    padding-bottom: 75px;
+}
+
+.rb-title,
+.rb-title p {
+    color: #fff;
+}
+
+.rb-title p {
+    margin-bottom: 20px;
+}
+
+.req-back-fbox input,
+.req-back-fbox textarea {
+    line-height: 24px;
+    height: 52px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    padding: 13px 20px;
+    border-radius: 0;
+    background-color: #ffffff;
+    color: #333333;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.req-back-fbox {
+    margin-bottom: 15px;
+}
+
+.req-back-fbox textarea {
+    height: 140px;
+}
+
+.req-back-fbox input:focus,
+.req-back-fbox textarea:focus {
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid transparent;
+    outline: 0;
+    box-shadow: 0 0 0 0.0rem rgba(0, 123, 255, 0);
+}
+
+.submit-btn .bc_btn {
+    width: 100%;
+    text-align: center;
+}
+
+.req-back-img img {
+    position: relative;
+    right: -70px;
+    margin-top: -60px;
+}
+
+/*--------------------------------------------------------------------
+             1.12  Price-section css
+----------------------------------------------------------------------*/
+.price-section {}
+
+.price-taitle {
+    text-align: center;
+}
+
+.price-table {
+    margin-top: 45px;
+}
+
+.price-table thead:first-child tr:first-child th {
+    border-top: 0;
+}
+
+.price-icon {
+    max-width: 25px;
+    margin-right: 15px;
+}
+
+.price-up {
+    color: #43c443
+}
+
+.price-down {
+    color: red;
+}
+
+/*--------------------------------------------------------------------
+             1.13   Promotion-Section css
+----------------------------------------------------------------------*/
+.promotion-section {
+    background: #ffb426;
+    padding: 60px 0;
+}
+
+.promotion-taitle {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.promotion-taitle h1:before {
+    background: #fff;
+
+}
+
+.promotion-taitle p {
+    color: #fff;
+}
+
+.promotion-content {
+    text-align: center;
+}
+
+.promotion-content p {
+    font-size: 18px;
+    color: #fff;
+    margin-right: 30px;
+    display: inline-block;
+}
+
+.promotion-content i {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-right: 15px;
+}
+
+.promotion-content span {
+    font-weight: bold;
+    margin-right: 40px;
+}
+
+.pc-btn {
+    background: #fff;
+    color: #222222;
+    padding: 4px 26px;
+}
+
+.pc-btn:hover {
+    background: #fff;
+    border-color: #222222;
+}
+
+/*--------------------------------------------------------------------
+             1.14   Team-Section css
+----------------------------------------------------------------------*/
+.team-section {
+    position: relative;
+    background: #f8f8f8;
+}
+
+.team-taitle {
+    margin-bottom: 20px;
+}
+
+.team-taitle p {
+    margin: 0;
+}
+.single-team {
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-content {
+    width: 100%;
+    height: auto;
+    background: #ffb426;
+    padding: 26px 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.team-content h3 {
+    font-size: 20px;
+    color: #222;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.team-content p {
+    font-size: 16px;
+    color: #fff;
+    text-transform: capitalize;
+    line-height: 30px;
+    height: 0;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s ease 0s;
+}
+
+.single-team:hover .team-content h3 {
+    color: #fff;
+}
+
+.single-team:hover .team-content p {
+    opacity: 1;
+    transform: scale(1);
+    height: 30px;
+    color: #fff;
+}
+
+.team-carousel .owl-nav ,
+.news-carousel .owl-nav {
+    display: block;
+}
+
+.team-carousel .owl-nav ,
+.news-carousel .owl-nav {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+
+.team-carousel .owl-nav.disabled ,
+.news-carousel .owl-nav.disabled {
+    display: block;
+}
+
+.prev,
+.next {
+    position: absolute;
+    right: 48px;
+    top: 0px;
+    background: #ffb426;
+    color: #fff;
+    border: 2px solid #ffb426;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    margin: 0px !important;
+    line-height: 35px;
+    text-align: center;
+
+}
+
+.next {
+    right: 0px;
+    top: 0px;
+}
+
+.prev i,
+.next i {
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.prev:hover,
+.next:hover {
+    background: #fff;
+    color: #ffb426;
+    border: 2px solid #ffb426;
+}
+
+/*--------------------------------------------------------------------
+            1.15  Countup-Section css
+----------------------------------------------------------------------*/
+.counterup-section {
+    background: url('../../assets/images/icon/countbg.jpg') fixed no-repeat top center / cover;
+    position: relative;
+    text-align: center;
+}
+
+.counterup-section:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(10, 35, 59, 0.8);
+}
+.single-c-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    border: 2px solid #ffb426
+}
+
+.single-c-icon img {
+    max-width: 38px;
+    margin-top: 9px;
+}
+
+.single-counter span {
+    color: #ffb426;
+    font-size: 50px;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.single-counter h3 {
+    color: #ffffff;
+    font-size: 18px;
+    padding-top: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+/*--------------------------------------------------------------------
+                   1.16 News-Section  css
+----------------------------------------------------------------------*/
+.news-section{}
+.news-carousel{}
+.single-post{
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 0px 0px 20px #DFDFDF;
+    box-shadow: 0px 0px 20px #DFDFDF;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.single-post-img{
+    position: relative;
+    overflow: hidden;
+}
+.single-post-img:before{
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.single-post-img img{
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.news-category{
+    margin: 20px 0 0 15px;
+    z-index: 2;
+    position: absolute;
+    top:0;
+}
+.news-category a{
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 15px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #ffb426;
+    margin: 0 4px 4px 0;
+    background: #ffb426;
+}
+.news-category:hover a{
+    background:transparent;
+    border: 1px solid #fff;
+}
+.single-post-content{
+    padding: 20px;
+}
+.single-post-content h3{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+.single-post-content a{
+        color: #222;
+}
+.single-post-content a:hover{
+    color: #ffb426;
+}
+.single-post-content p{
+    font-size: 14px;
+    margin-bottom: 0;
+    color: #a6a6a6;
+}
+.single-post-meta{
+    border-top: 1px solid #f0f0f0;
+    padding: 10px 20px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+
+}
+.single-post-meta a{
+    display: inline-block;
+    font-size: 13px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    color: #b3b3b3;
+}
+.single-post-meta a:hover{
+    color: #ffb426;
+}
+.single-post-meta i{
+    margin-right: 5px;
+    color: #ffb426;
+}
+.single-post:hover .single-post-img img{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.news-carousel .prev,
+.news-carousel .next {
+    background: transparent;
+    color: #ffb426;
+    border: 2px solid #ffb426;
+}
+.news-carousel .prev:hover,
+.news-carousel .next:hover {
+    background: #ffb426;
+    color: #fff;
+    border: 2px solid #ffb426;
+}
+/*--------------------------------------------------------------------
+                   1.17 Scrolltop  css
+----------------------------------------------------------------------*/
+.scrolltop {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    width: 45px;
+    height: 45px;
+    background: #ffb426 none repeat scroll 0 0;
+    line-height: 49px;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    display: none;
+    z-index: 999;
+}
+.scrolltop i {
+    color: #fff;
+    font-size: 18px;
+}
+.scrolltop:after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 1;
+    background: -webkit-radial-gradient(rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 80%);
+    background: radial-gradient(rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 80%);
+}
+/*--------------------------------------------------------------------
+                   1.18 Footer-Section  css
+----------------------------------------------------------------------*/
+.footer-section{
+    position: relative;
+    background: #222;
+    color:#fff;
+}
+.footer-bg{
+    padding: 100px 0 70px;
+}
+
+.footer-text p{
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 30px;
+}
+.social-icons{
+        margin-top: 20px;
+    margin-left: -10px;
+}
+.social-icons ul li a{
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 14px;
+     width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    transition: all .3s ease;
+    margin-right: 15px;
+     transform: rotate(-45deg)!important;
+}
+.social-icons ul li a i{
+    transform: rotate(45deg) !important;
+    
+}
+.social-icons ul li a:hover{
+    background:#fff !important;
+    color:#ffb426;
+
+}
+.footer-title h2{
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+.links ul li a{
+    position: relative;
+    color: #ffffff;
+    font-size: 14px;
+    padding-left: 15px;
+    margin-top: 20px;
+    display:block;
+    transition: all .3s ease;
+    text-transform: capitalize;
+}
+.links ul li a:before{
+    position: absolute;
+    content: "\f101";
+    font-family: 'FontAwesome';
+    left:0px;
+    
+}
+.links ul li a:hover{
+    color:#ffb426;
+}
+.location ul li:first-child{
+    padding-left: 0;
+}
+.location ul li  {
+    color: #ffffff;
+    font-size: 14px;
+    padding-left: 25px;
+    margin-top: 16px;
+}
+.location ul li i{
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+    margin-top: 4px;
+}
+.ppost-content{
+    overflow: hidden;
+}
+.ppost-content img{
+    padding-right: 20px;
+    transition: all 0.5s ease;
+}
+.ppost-content:hover img{
+   transform: scale(1.1);
+}
+.ppost-title a{
+    font-size: 14px;
+    position: relative;
+    font-weight: 600;
+    margin: 0 0 7px 0;
+    display: block;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+.ppost-date{
+    color: #ffb426;
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    transition: all 0.5s ease;
+}
+.ppost-cntb{
+    border-bottom: 2px solid #6f6565 ;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    margin-top: 20px;
+}
+.copyRight-text{
+    text-align: center;
+    border-top: 2px solid #4B4B4B;
+    padding: 20px 0;
+}
+.copyRight-text p{}
+.copyRight-text a{
+    color: #ccc !important;
+}
+.copyRight-text a:hover{
+    color: #ffb426 !important;
+}
