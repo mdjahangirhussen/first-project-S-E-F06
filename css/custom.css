@@ -1008,7 +1008,34 @@ textarea {
     margin-top: 9px;
 }
 
-.single-counter span {
+.progressbar {
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.circle {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+    color: #fff;
+}
+
+.circle canvas {
+  vertical-align: middle;
+    height: 55px;
+}
+
+.circle div {
+  position: absolute;
+  top:0px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
     color: #ffb426;
     font-size: 50px;
     font-family: sans-serif;
@@ -1295,3 +1322,7 @@ textarea {
 .copyRight-text a:hover{
     color: #ffb426 !important;
 }
+
+
+
+
