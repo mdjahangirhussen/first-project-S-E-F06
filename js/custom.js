@@ -10,19 +10,20 @@ $(document).ready(function () {
     *========== TABLE OF CONTENTS ================
 
         0.1  Reveloution Slider
-        0.2  CounterUp Js
-        0.3  Fixed Top Navbar Js
-        0.4  scrolltop js
+        0.2  Fixed Top Navbar Js
+        0.3  scrolltop js
+        0.4  comment-area  js
         0.5  team-carousel js
         0.6  news-carousel js
-        0.7  Dropdown on hover Js
-        0.8  Dropdown Js 
+        0.7  counterup js
+        0.8  Dropdown on hover Js
         0.9  WoW Js
-        010  Preloader Js
-        011  Mobile_dropdown_menu Js
-        012  Mobile_dropdown_ click Js
-        013 NiceScroll Js
-     
+        010  Gmaps.js
+        011  Preloader Js
+        012  Mobile_dropdown_menu Js
+        013  Mobile_dropdown_ click Js
+        014  NiceScroll Js
+        015 Comment-btn Js
 
     ========================================*/
     /*--------------------------------
@@ -91,10 +92,8 @@ $(document).ready(function () {
             });
         }
     });
-    
 
-    
-    //-------- 0.3 Fixed Top Navbar Js --------
+    //-------- 0.2 Fixed Top Navbar Js --------
     $(window).scroll(function () {
         var sticky = $('.sticky'),
             scroll = $(window).scrollTop();
@@ -102,10 +101,10 @@ $(document).ready(function () {
         if (scroll >= 180) sticky.addClass('fixed')
         else sticky.removeClass('fixed');
     });
-    
-    
-    //-------- 0.4 scrolltop js --------
-     $(window).scroll(function () {
+
+
+    //-------- 0.3 scrolltop js --------
+    $(window).scroll(function () {
         if ($(this).scrollTop() > 120) {
             $('.scrolltop').fadeIn();
         } else {
@@ -120,6 +119,15 @@ $(document).ready(function () {
         return false;
     });
 
+    //-------- 0.4 comment-area  js --------
+
+    $('.cmt-btn-click').click(function () {
+        $('.media-box').slideToggle(1000);
+    });
+    $('.cmt-btn-click-two').click(function () {
+        $('.media-box2').slideToggle(1000);
+    });
+
     // -------- 0.5 team-carousel --------
     $('.team-carousel').owlCarousel({
         loop: true,
@@ -128,7 +136,7 @@ $(document).ready(function () {
         dots: false,
         autoplay: true,
         autoplayHoverPause: true,
-        navText: ['<div class="prev"><i class="fas fa-chevron-left"></i></div>', 
+        navText: ['<div class="prev"><i class="fas fa-chevron-left"></i></div>',
                   '<div class="next"><i class="fas fa-chevron-right"></i></div>'],
         responsive: {
             0: {
@@ -149,7 +157,7 @@ $(document).ready(function () {
             }
         }
     });
-    
+
     // -------- 0.6 news-carousel js --------
     $('.news-carousel').owlCarousel({
         loop: true,
@@ -158,42 +166,69 @@ $(document).ready(function () {
         dots: false,
         autoplay: true,
         autoplayHoverPause: true,
-        navText: ['<div class="prev"><i class="fas fa-chevron-left"></i></div>', 
+        navText: ['<div class="prev"><i class="fas fa-chevron-left"></i></div>',
                   '<div class="next"><i class="fas fa-chevron-right"></i></div>'],
         responsive: {
-		        0:{
-		            items:1,
-		            autoWidth: false
-		        },
-		        380:{
-		            items:1,
-		            autoWidth: false
-		        },
-		        540:{
-		            items:2,
-		            autoWidth: false
-		        },
-		        740:{
-		            items:2,
-		            autoWidth: false
-		        },
-		        1000:{
-		            items:3,
-		            autoWidth: false
-		        }
-		    }
+            0: {
+                items: 1,
+                autoWidth: false
+            },
+            380: {
+                items: 1,
+                autoWidth: false
+            },
+            540: {
+                items: 2,
+                autoWidth: false
+            },
+            740: {
+                items: 2,
+                autoWidth: false
+            },
+            1000: {
+                items: 3,
+                autoWidth: false
+            }
+        }
     });
     
     
-    
-        //-------- 0.2 counterUp Js --------
-      $('.counter').counterUp({
-    delay: 10,
-    time: 1000
-});
-    
-    
-    //-------- 0.7 Dropdown on hover Js --------
+    // -------- 0.7 counterup js --------
+    console.log("JavaScript is amazing!");
+    $(document).ready(function ($) {
+        function animateElements() {
+            $('.progressbar').each(function () {
+                var elementPos = $(this).offset().top;
+                var topOfWindow = $(window).scrollTop();
+                var percent = $(this).find('.circle').attr('data-percent');
+                var percentage = parseInt(percent, 10) / parseInt(100, 20);
+                var animate = $(this).data('animate');
+                if (elementPos < topOfWindow + $(window).height() - 30 && !animate) {
+                    $(this).data('animate', true);
+                    $(this).find('.circle').circleProgress({
+                        startAngle: -Math.PI / 0,
+                        value: percent / 100,
+                        thickness: 0,
+                        animation: {
+                            duration: 5000,
+
+                        },
+                        fill: {
+                            color: '#1B58B8'
+                        }
+                    }).on('circle-animation-progress', function (event, progress, stepValue) {
+                        $(this).find('div').text((stepValue * 100).toFixed() + "+");
+                    }).stop();
+                }
+            });
+        }
+
+        // Show animated elements
+        animateElements();
+        $(window).scroll(animateElements);
+    });
+
+    //-------- 0.8 Dropdown on hover Js --------
 
     $(".dropdown").hover(
         function () {
@@ -203,41 +238,32 @@ $(document).ready(function () {
             $(this).find('.d_down_menu ,.s_down_menu, .sh_down_menu,.bd_down_menu').stop(true, false, true).slideUp(100);
         });
 
-    //-------- 0.8 Dropdown Js --------
-
-    $('.main_menu ul li a ').click(function () {
-        $('.main_menu ul li a ').removeClass("active");
-        $(this).addClass("active");
-    });
-
-    $('.d_down_menu li a').click(function () {
-        $('.d_down_menu li a').removeClass("active");
-        $('.about').addClass("active");
-    });
-    $('.s_down_menu li a').click(function () {
-        $('.s_down_menu li a').removeClass("active");
-        $('.service').addClass("active");
-    });
-
-    $('.sh_down_menu li a').click(function () {
-        $('.sh_down_menu li a').removeClass("active");
-        $('.shop').addClass("active");
-    });
-    $('.bd_down_menu li a').click(function () {
-        $('.bd_down_menu li a').removeClass("active");
-        $('.blog').addClass("active");
-    });
-
     //-------- 0.9 WoW Js --------
     new WOW().init({});
 
+   //-------- 10 gmaps.js --------
+        var map = new GMaps({
+            el: '#map',
+            lat: 40.7128,
+            lng: -74.0060,
+        });
+        map.addMarker({
+            lat:40.7128,
+            lng: -74.0060,
+            zoomOut:18,
+            title:'Sylhet',
+            icon: 'assets/images/map-marker.png',
+            animation: google.maps.Animation.BOUNCE
+        });
+
+
 });
-//-------- 0.10 Preloader Js --------
+//-------- 11 Preloader Js --------
 $(window).on("load", function () {
     $(".preloader").delay(200).fadeOut(500);
 });
 
-//-------- 0.11 Mobile_dropdown_menu Js --------
+//-------- 0.12 Mobile_dropdown_menu Js --------
 $('.d_down_btn').click(function () {
     $('.md_drop_menu').slideToggle();
 });
@@ -248,12 +274,23 @@ $('.bd_down_btn').click(function () {
     $('.b_down_menu').slideToggle();
 });
 
-//-------- 0.12  Mobile_dropdown_ click Js --------
+//-------- 0.13  Mobile_dropdown_ click Js --------
 $('.about,.service,.shop,.blog').click(function () {
     $('.about,.service,.shop,.blog').off("click", flash)
 });
 
-//--------  0.13 NiceScroll Js --------
+//--------  0.14 NiceScroll Js --------
 $(".custom_scroll").niceScroll({
     autohidemode: false,
 });
+
+//--------  0.15 Comment-btn Js --------
+$('.comment-btn').click(function () {
+    $('.media-box').slideToggle();
+});
+
+
+
+
+
+
